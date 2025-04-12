@@ -1,0 +1,344 @@
+/* Font import and global reset */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Body styling */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(33, 33, 33);
+}
+
+/* Header styling */
+header {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 2em;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul .dropdown {
+  position: relative;
+}
+
+header nav ul .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  list-style: none;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+}
+
+header nav ul .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header nav ul .dropdown-content li {
+  padding: 10px 20px;
+}
+
+header nav ul .dropdown-content a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+}
+
+header nav ul .dropdown-content a:hover {
+  background: rgb(240, 240, 240);
+}
+
+header nav ul a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav ul a:hover {
+  color: rgb(255, 69, 0);
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://internationaljournalofresearch.com/wp-content/uploads/2020/08/indian-judiciary.jpg') no-repeat center center/cover;
+  color: rgb(255, 255, 255);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: rgb(255, 69, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: rgb(255, 99, 71);
+}
+
+/* About section */
+.about {
+  padding: 60px 20px;
+  background: rgb(245, 245, 245);
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.about p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Services section */
+.services {
+  padding: 60px 20px;
+  background: rgb(255, 255, 255);
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.services-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-card {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  margin-bottom: 20px;
+}
+
+.service-card a {
+  color: rgb(255, 69, 0);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact section */
+.contact {
+  padding: 60px 20px;
+  background: rgb(245, 245, 245);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+.contact button {
+  background: rgb(255, 69, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: rgb(255, 99, 71);
+}
+
+.contact-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}
+
+#email-link {
+  color: rgb(0, 0, 255);
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
