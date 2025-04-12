@@ -47,7 +47,7 @@ INSAAF aims to democratize legal access in India, especially for people in remot
 
 ## 📷 Demo
 
-🎥 _Add your YouTube/demo link here_
+🎥https://youtu.be/8IjmfIf2Vc8?si=eIkAKfp5ISjyKVN9
 
 ## 📁 How to Use
 
@@ -55,11 +55,3 @@ INSAAF aims to democratize legal access in India, especially for people in remot
 2. Set up environment variables and install dependencies  
 3. Run the Flask app using `python app.py`  
 4. Open `http://localhost:5000` in your browser
-
-## 🤝 Contributions
-
-We welcome contributions! Feel free to fork the repository, make changes, and submit a pull request.
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
